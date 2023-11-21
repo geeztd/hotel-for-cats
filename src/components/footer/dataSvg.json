@@ -1,0 +1,20 @@
+[
+	{
+		"width": 22,
+		"height": 22,
+		"alt": "Facebook",
+		"path": "/home/SN/facebook.svg"
+	},
+	{
+		"width": 22,
+		"height": 22,
+		"alt": "Insta",
+		"path": "/home/SN/insta.svg"
+	},
+	{
+		"width": 22,
+		"height": 22,
+		"alt": "VK",
+		"path": "/home/SN/vk.svg"
+	}
+]

@@ -1,0 +1,26 @@
+.burger_nav {
+	.burger_off {
+		@apply flex flex-col justify-between h-6 w-8 md:hidden;
+		span {
+			@apply bg-[#FAC663] w-8 h-[1px];
+		}
+	}
+	.box {
+		@apply absolute h-[100vh] w-[100vw] top-0 left-0 bg-white;
+	}
+	.head {
+		@apply flex w-10/12 mx-auto justify-between mt-5;
+		.burger_on {
+			@apply h-6 w-8 relative mt-3 mr-3;
+			.span1 {
+				@apply absolute top-1/2 left-1/2 rotate-45 bg-[#FAC663] w-10 h-[1px] block;
+			}
+			.span2 {
+				@apply absolute top-1/2 left-1/2 -rotate-45 bg-[#FAC663] w-10 h-[1px] block;
+			}
+		}
+	}
+	.nav {
+		@apply flex flex-col gap-3 text-center mt-6;
+	}
+}

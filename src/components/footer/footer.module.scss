@@ -1,0 +1,21 @@
+.footer {
+	@apply md:w-10/12  md:mb-10 mb-2 mx-auto bg-[#FAC663] md:bg-white;
+	h1 {
+		@apply text-4xl md:text-5xl lg:text-6xl text-center mb-6;
+	}
+	.box {
+		@apply grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 justify-between;
+		.item {
+			@apply w-10/12 md:w-full mx-auto md:mx-0 md:text-center lg:text-left;
+			h3 {
+				@apply font-bold;
+			}
+			.sn {
+				@apply flex w-[138px] justify-between md:mx-auto lg:mx-0  my-1;
+			}
+		}
+	}
+}
+.copy {
+	@apply flex flex-col md:flex-row text-center justify-around text-[#8F8F8F] border-t border-[#8F8F8F] mt-4;
+}

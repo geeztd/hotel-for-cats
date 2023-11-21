@@ -1,0 +1,23 @@
+.aboute {
+	@apply flex justify-center relative align-middle flex-col;
+	.heading {
+		@apply text-center lg:text-7xl md:text-6xl text-4xl my-5;
+	}
+	.box {
+		@apply grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-10/12 self-center;
+		.item {
+			@apply bg-white rounded-lg shadow p-3;
+			.img {
+			}
+			.h {
+				@apply text-2xl font-medium my-3;
+			}
+			.p {
+				@apply text-base text-justify w-11/12;
+			}
+		}
+	}
+	.footprint {
+		@apply absolute right-0 top-0;
+	}
+}

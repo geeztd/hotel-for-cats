@@ -1,0 +1,11 @@
+.header {
+	@apply flex justify-between w-10/12 md:mt-3 mx-auto items-center;
+	.logo {
+	}
+	.nav {
+		@apply md:flex md:gap-5 gap-2 items-center grid grid-cols-2;
+		.link {
+			@apply h-min;
+		}
+	}
+}
