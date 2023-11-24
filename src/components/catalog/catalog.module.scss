@@ -1,0 +1,24 @@
+.catalog {
+	@apply grid  place-content-center md:grid-cols-3 gap-2  lg:w-10/12 justify-center;
+	.item {
+		@apply rounded-lg pb-2 shadow border border-[#E1E1E1] bg-white w-fit flex flex-col items-center justify-center;
+		.info {
+			@apply w-fit pb-2;
+			h4 {
+				@apply text-xl font-bold;
+			}
+			.sq {
+				@apply text-[9px] align-top;
+			}
+			.facility {
+				@apply flex gap-1;
+				.images {
+					@apply flex gap-1;
+				}
+			}
+		}
+		.img {
+			@apply h-[185px];
+		}
+	}
+}

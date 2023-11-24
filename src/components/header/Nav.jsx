@@ -21,7 +21,7 @@ const Nav = ({ isFooter }) => {
 					<Link className={styles.link} href='/#aboute'>
 						Почему мы?
 					</Link>
-					<Link className={styles.link} href='/#num'>
+					<Link className={styles.link} href='/rooms'>
 						Номера
 					</Link>
 					<Link className={styles.link} href='/#com'>

@@ -3,10 +3,10 @@ import React from 'react';
 
 import styles from './button.module.scss';
 
-const Button = () => {
+const Button = ({ text }) => {
 	return (
 		<div className={styles.button}>
-			<h3 className={styles.h}>Забронировать</h3>
+			<h3 className={styles.h}>{text}</h3>
 			<Image
 				className={styles.img}
 				src='/home/button.svg'
