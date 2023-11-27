@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google';
+import { Rubik } from 'next/font/google';
 
 import Footer from '@/components/footer/Footer';
 import Providers from '@/components/provider/Providers';
@@ -6,7 +7,7 @@ import Providers from '@/components/provider/Providers';
 import Header from './_header';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const rubik = Rubik({ subsets: ['latin'] });
 
 export const metadata = {
 	title: 'Котейка',
@@ -15,11 +16,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang='en'>
-			<body>
+		<html lang='ru'>
+			<body className={rubik.className}>
 				<Providers>
 					<Header />
-					<main className={inter.className}>{children}</main>
+					<main>{children}</main>
 					<Footer />
 				</Providers>
 			</body>

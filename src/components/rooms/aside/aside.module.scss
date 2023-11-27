@@ -1,0 +1,28 @@
+.aside {
+	@apply flex justify-center flex-grow;
+
+	form {
+		@apply max-w-[200px] ml-2;
+		/* input {
+			@apply opacity-0 -z-50 absolute; 
+		} */
+		.cost {
+			@apply flex gap-2;
+			input {
+				@apply w-5/12;
+			}
+		}
+		.sq_box {
+			@apply flex flex-col gap-2 relative;
+			.sq {
+				@apply text-[10px] align-top;
+			}
+		}
+		.fas {
+			@apply flex flex-col gap-2;
+		}
+		h4 {
+			@apply text-lg font-medium mt-4 mb-2;
+		}
+	}
+}

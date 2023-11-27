@@ -6,7 +6,7 @@ const Aside = ({ rooms }) => {
 	return (
 		<aside className={styles.aside}>
 			<form action='filter'>
-				<h4>Цена за сутки</h4>
+				<h4>Цена за сутки, ₽</h4>
 				<div className={styles.cost}>
 					<input type='text' placeholder='от 100' />
 					<input type='text' placeholder='до 600' />
@@ -14,9 +14,8 @@ const Aside = ({ rooms }) => {
 				<h4>Площадь</h4>
 				<div className={styles.sq_box}>
 					{rooms.map((item) => (
-						<label>
+						<label key={item.name}>
 							<input
-								key={item.name}
 								type='checkbox'
 								onChange={(e) => {
 									console.log(`click ${item.square},`);
@@ -24,7 +23,7 @@ const Aside = ({ rooms }) => {
 								name={item.square}
 								id='sq'
 							/>{' '}
-							{item.square}
+							{item.square} м<span className={styles.sq}>2</span>
 						</label>
 					))}
 				</div>
@@ -46,6 +45,8 @@ const Aside = ({ rooms }) => {
 						<input type='checkbox' name='' id='fas' /> Домик
 					</label>
 				</div>
+				<p className={styles.reset}>Сбросить фильтры</p>
+				<p className={styles.active}>Подобрать</p>
 			</form>
 		</aside>
 	);

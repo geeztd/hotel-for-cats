@@ -1,12 +1,12 @@
 .slide {
-	@apply w-10/12 relative md:flex justify-center items-center my-10 mx-auto;
+	@apply w-10/12 relative md:flex justify-center items-center mt-10 mb-14 mx-auto;
 	.img {
-		@apply w-auto h-[340px] z-0 object-cover;
+		@apply w-auto lg:h-[340px]  h-[240px] rounded-lg z-0 object-cover;
 	}
 	.aboute {
 		@apply rounded-lg shadow md:w-96 h-60 bg-white flex justify-center items-center z-20  md:translate-x-[-40px];
 		.box {
-			@apply flex flex-col gap-3;
+			@apply flex flex-col gap-3 pl-2 items-center justify-center;
 			h2 {
 				@apply text-2xl;
 			}

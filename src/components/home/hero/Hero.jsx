@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 import Button from '@/components/button/Button';
@@ -20,7 +21,9 @@ const Hero = () => {
 				<h6>Санкт-Петербург</h6>
 				<h1>Котейка</h1>
 				<h5>Уютная гостиница для котов и кошек</h5>
-				<Button text={`Забронировать`} />
+				<Link href='/rooms' className={styles.link}>
+					<Button text={`Забронировать`} />
+				</Link>
 			</div>
 		</div>
 	);

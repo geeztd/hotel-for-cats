@@ -1,0 +1,22 @@
+.banner {
+	@apply relative mb-5 w-[290px] md:w-10/12 mx-auto rounded-lg aspect-[3] flex justify-center md:justify-normal md:items-center bg-no-repeat md:bg-contain md:h-auto h-96;
+	background-image: url('/banner/banner.png');
+	@media (max-width: 767px) {
+		background-image: url('/banner/bannerMobile.png');
+		background-position: bottom;
+	}
+
+	.img {
+		@apply absolute md:-top-4 left-0 top-0 md:-left-4 md:w-28 lg:w-auto w-20;
+	}
+	.text {
+		@apply lg:ml-52 md:ml-14 ml-5 max-w-[270px] mt-3 md:mt-0;
+		.h2,
+		.h3 {
+			@apply md:text-4xl text-xl font-bold;
+		}
+		.p {
+			@apply mt-5;
+		}
+	}
+}

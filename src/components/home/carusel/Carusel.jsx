@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -10,13 +11,22 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Slide from './Slide';
 import SlideReviews from './SlideReviews';
-import data from './data.json';
 import dataReviews from './dataReviews.json';
 import styles from './slide.module.scss';
+import getRand from '@/functions/getRand';
 
 const Carusel = ({ slidesView, isReviews, id }) => {
+	const rooms = Array.from(useSelector((state) => state.room.data));
+	const selectItem = useSelector((state) => state.room.selectOne);
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		setData(getRand(rooms, selectItem));
+	}, [selectItem]);
+
 	let numberSwiper;
 	isReviews ? (numberSwiper = 1) : (numberSwiper = 2);
+
 	return (
 		<div className={styles.wrapper} id={id}>
 			<Swiper
@@ -46,9 +56,10 @@ const Carusel = ({ slidesView, isReviews, id }) => {
 					: data.map((item) => (
 							<SwiperSlide key={item.name}>
 								<Slide
-									src={item.src}
+									slug={item.slug}
+									img={item.img}
 									name={item.name}
-									space={item.space}
+									space={item.square}
 									size={item.size}
 									cost={item.cost}
 								/>

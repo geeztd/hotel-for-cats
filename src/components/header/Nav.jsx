@@ -18,17 +18,17 @@ const Nav = ({ isFooter }) => {
 			</div>
 			{isMobile || isFooter ? (
 				<nav className={styles.nav}>
-					<Link className={styles.link} href='/#aboute'>
-						Почему мы?
+					<Link className={styles.link} href='/'>
+						Главная
 					</Link>
 					<Link className={styles.link} href='/rooms'>
 						Номера
 					</Link>
+					<Link className={styles.link} href='/#aboute'>
+						Почему мы?
+					</Link>
 					<Link className={styles.link} href='/#com'>
 						Отзывы
-					</Link>
-					<Link className={styles.link} href='/'>
-						Как нас найти
 					</Link>
 				</nav>
 			) : (

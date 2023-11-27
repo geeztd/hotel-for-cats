@@ -6,9 +6,12 @@
 		@apply absolute  md:rotate-0 -top-32 -left-[50vw] -z-10;
 	}
 	.info {
-		@apply h-full flex justify-center gap-3 align-middle flex-col z-50 md:ml-[8.3%];
+		@apply h-full flex justify-center gap-3 align-middle flex-col z-40 md:ml-[8.3%];
 		h1 {
 			@apply text-5xl;
+		}
+		.link {
+			@apply z-50;
 		}
 	}
 }

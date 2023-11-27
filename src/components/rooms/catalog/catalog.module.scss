@@ -1,5 +1,5 @@
 .catalog {
-	@apply grid  place-content-center md:grid-cols-3 gap-2  lg:w-10/12 justify-center;
+	@apply grid place-items-center md:grid-cols-3 gap-4 max-w-5xl  lg:w-10/12 justify-center mb-7 mt-4 mr-2;
 	.item {
 		@apply rounded-lg pb-2 shadow border border-[#E1E1E1] bg-white w-fit flex flex-col items-center justify-center;
 		.info {
@@ -8,7 +8,7 @@
 				@apply text-xl font-bold;
 			}
 			.sq {
-				@apply text-[9px] align-top;
+				@apply text-[10px] align-top;
 			}
 			.facility {
 				@apply flex gap-1;
