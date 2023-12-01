@@ -24,7 +24,14 @@ const Item = ({ params }) => {
 	}
 
 	return (
-		<section>
+		<section className={styles.sec}>
+			<Image
+				src='/banner/footprint.svg'
+				alt=''
+				width={299}
+				height={346}
+				className={styles.print}
+			/>
 			<div className={styles.cart}>
 				<Image
 					src={item.img}
@@ -32,13 +39,6 @@ const Item = ({ params }) => {
 					height={7000}
 					alt='cat'
 					className={styles.img}
-				/>
-				<Image
-					src='/banner/footprint.svg'
-					alt=''
-					width={299}
-					height={346}
-					className={styles.print}
 				/>
 				<div className={styles.info}>
 					<h2 className={styles.name}>{item.name}</h2>

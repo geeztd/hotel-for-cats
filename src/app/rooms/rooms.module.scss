@@ -13,5 +13,8 @@
 		.filter_box {
 			@apply hidden;
 		}
+		.filter {
+			@apply shadow rounded-3xl flex gap-2 text-lg p-2;
+		}
 	}
 }

@@ -8,8 +8,8 @@ const Aside = ({ rooms }) => {
 			<form action='filter'>
 				<h4>Цена за сутки, ₽</h4>
 				<div className={styles.cost}>
-					<input type='text' placeholder='от 100' />
-					<input type='text' placeholder='до 600' />
+					<input type='number' placeholder='от 100' />
+					<input type='number' placeholder='до 600' />
 				</div>
 				<h4>Площадь</h4>
 				<div className={styles.sq_box}>
@@ -17,6 +17,7 @@ const Aside = ({ rooms }) => {
 						<label key={item.name}>
 							<input
 								type='checkbox'
+								defaultChecked
 								onChange={(e) => {
 									console.log(`click ${item.square},`);
 								}}
@@ -30,23 +31,28 @@ const Aside = ({ rooms }) => {
 				<h4>Оснащение</h4>
 				<div className={styles.fas}>
 					<label>
-						<input type='checkbox' name='' id='fas' /> Пустой номер
+						<input type='checkbox' defaultChecked id='fas' /> Пустой номер
 					</label>
 					<label>
-						<input type='checkbox' name='' id='fas' /> Лежак
+						<input type='checkbox' defaultChecked id='fas' /> Лежак
 					</label>
 					<label>
-						<input type='checkbox' name='' id='fas' /> Когтеточка
+						<input type='checkbox' defaultChecked id='fas' /> Когтеточка
 					</label>
 					<label>
-						<input type='checkbox' name='' id='fas' /> Игровой комплекс
+						<input type='checkbox' defaultChecked id='fas' /> Игровой
+						комплекс
 					</label>
 					<label>
-						<input type='checkbox' name='' id='fas' /> Домик
+						<input type='checkbox' defaultChecked id='fas' /> Домик
 					</label>
 				</div>
-				<p className={styles.reset}>Сбросить фильтры</p>
-				<p className={styles.active}>Подобрать</p>
+				<button className={styles.reset} type='reset'>
+					<p>Сбросить фильтры</p>
+				</button>
+				<button className={styles.active} type='button'>
+					<p>Подобрать</p>
+				</button>
 			</form>
 		</aside>
 	);

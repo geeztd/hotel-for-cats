@@ -3,13 +3,10 @@
 
 	form {
 		@apply max-w-[200px] ml-2;
-		/* input {
-			@apply opacity-0 -z-50 absolute; 
-		} */
 		.cost {
 			@apply flex gap-2;
 			input {
-				@apply w-5/12;
+				@apply w-5/12 border outline-none rounded-md pl-1;
 			}
 		}
 		.sq_box {
@@ -23,6 +20,12 @@
 		}
 		h4 {
 			@apply text-lg font-medium mt-4 mb-2;
+		}
+		.reset {
+			@apply lg:w-full border-orange-400 border h-10 rounded-3xl text-center my-2 align-middle;
+		}
+		.active {
+			@apply lg:w-full bg-orange-400 rounded-3xl h-10 text-center my-2 align-middle;
 		}
 	}
 }
