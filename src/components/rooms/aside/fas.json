@@ -1,0 +1,27 @@
+[
+	{
+		"value": "/facility/empty.svg",
+		"name": "Пустой номер",
+		"id": 0
+	},
+	{
+		"value": "/facility/sunbed.svg",
+		"name": "Лежак",
+		"id": 1
+	},
+	{
+		"value": "/facility/post.svg",
+		"name": "Когтеточка",
+		"id": 2
+	},
+	{
+		"value": "/facility/complex.svg",
+		"name": "Игровой комплекс",
+		"id": 3
+	},
+	{
+		"value": "/facility/house.svg",
+		"name": "Домик",
+		"id": 4
+	}
+]
