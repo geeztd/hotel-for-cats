@@ -7,7 +7,18 @@ import Button from '@/components/button/Button';
 import styles from './catalog.module.scss';
 
 const Catalog = ({ rooms }) => {
-	return (
+	return rooms.length === 0 ? (
+		<div className={styles.null}>
+			<h1>По выбранным критериям ничего не найдено</h1>
+			<Image
+				src='/not_found.png'
+				width={800}
+				height={800}
+				alt='cat'
+				className={styles.img}
+			/>
+		</div>
+	) : (
 		<div className={styles.catalog}>
 			{rooms.map((item) => (
 				<Link href={`/rooms/${item.slug}`} key={item.name}>

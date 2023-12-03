@@ -22,10 +22,10 @@
 			@apply text-lg font-medium mt-4 mb-2;
 		}
 		.reset {
-			@apply lg:w-full border-orange-400 border h-10 rounded-3xl text-center my-2 align-middle;
+			@apply w-full border-orange-400 border h-10 rounded-3xl text-center my-2 align-middle;
 		}
 		.active {
-			@apply lg:w-full bg-orange-400 rounded-3xl h-10 text-center my-2 align-middle;
+			@apply w-full bg-orange-400 rounded-3xl h-10 text-center my-2 align-middle;
 		}
 	}
 }

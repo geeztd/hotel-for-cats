@@ -40,7 +40,12 @@ const page = () => {
 						</form>
 					</section>
 					<section className={styles.catolog}>
-						<Aside rooms={rooms} setData={setData} />
+						<Aside
+							rooms={rooms}
+							setData={setData}
+							setFiltOpen={setFiltOpen}
+							data={data}
+						/>
 						<Catalog rooms={sel % 2 === 0 ? data : data.reverse()} />
 					</section>
 					<Banner />
@@ -50,7 +55,12 @@ const page = () => {
 					<div className={styles.filter_box}>
 						{isFiltOpen ? (
 							<Modal setFiltOpen={setFiltOpen}>
-								<Aside rooms={rooms} setData={setData} />
+								<Aside
+									data={data}
+									rooms={rooms}
+									setData={setData}
+									setFiltOpen={setFiltOpen}
+								/>
 							</Modal>
 						) : null}
 					</div>

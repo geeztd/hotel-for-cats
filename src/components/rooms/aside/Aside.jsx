@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './aside.module.scss';
 import fas from './fas.json';
 
-const Aside = ({ rooms, setData }) => {
+const Aside = ({ rooms, data, setData, setFiltOpen }) => {
 	const Submit = (e) => {
 		e.preventDefault();
 		const formData = new FormData(document.getElementById('formFilter'));
@@ -47,15 +47,23 @@ const Aside = ({ rooms, setData }) => {
 				</div>
 				<h4>Площадь</h4>
 				<div className={styles.sq_box}>
-					{rooms.map((item) => (
+					{rooms.map((item, i) => (
 						<label key={item.name}>
-							<input
-								type='checkbox'
-								defaultChecked
-								name={item.square}
-								id={`sq${item.square}`}
-							/>{' '}
-							{item.square} м<span className={styles.sq}>2</span>
+							{[...data].includes(item) ? (
+								<input
+									type='checkbox'
+									defaultChecked
+									name={item.square}
+									id={`sq${item.square}`}
+								/>
+							) : (
+								<input
+									type='checkbox'
+									name={item.square}
+									id={`sq${item.square}`}
+								/>
+							)}
+							{`${item.square} м²`}
 						</label>
 					))}
 				</div>
@@ -73,10 +81,23 @@ const Aside = ({ rooms, setData }) => {
 						</label>
 					))}
 				</div>
-				<button className={styles.reset} type='reset'>
+				<button
+					className={styles.reset}
+					type='reset'
+					onClick={(e) => {
+						setFiltOpen(false);
+						setData(rooms);
+					}}
+				>
 					<p>Сбросить фильтры</p>
 				</button>
-				<button className={styles.active} onClick={Submit}>
+				<button
+					className={styles.active}
+					onClick={(e) => {
+						Submit(e);
+						setFiltOpen(false);
+					}}
+				>
 					<p>Подобрать</p>
 				</button>
 			</form>

@@ -19,3 +19,9 @@
 		}
 	}
 }
+.null {
+	@apply mb-7 mt-4 mr-2 max-w-5xl  lg:w-10/12 md:text-3xl text-xl text-center flex justify-center items-center flex-col;
+	.img {
+		@apply w-80 h-auto;
+	}
+}
