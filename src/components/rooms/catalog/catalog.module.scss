@@ -3,7 +3,7 @@
 	.item {
 		@apply rounded-lg pb-2 shadow border border-[#E1E1E1] bg-white w-fit flex flex-col items-center justify-center;
 		.info {
-			@apply w-fit pb-2;
+			@apply w-fit pb-2 pl-2;
 			h4 {
 				@apply text-xl font-bold;
 			}

@@ -22,7 +22,7 @@ const Hero = () => {
 				<h1>Котейка</h1>
 				<h5>Уютная гостиница для котов и кошек</h5>
 				<Link href='/rooms' className={styles.link}>
-					<Button text={`Забронировать`} />
+					<Button text={`Забронировать`} type={0} />
 				</Link>
 			</div>
 		</div>

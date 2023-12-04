@@ -1,17 +1,21 @@
 .hero {
 	background: url('/home/HeroCat.png');
 	background-size: cover;
-	@apply mt-3 relative md:bg-center -z-50 h-[500px] bg-bottom md:block flex justify-center items-center overflow-hidden;
+	@apply mt-3 relative md:bg-center  h-[500px] bg-bottom md:block flex justify-center items-center overflow-hidden;
 	.vector {
-		@apply absolute  md:rotate-0 -top-32 -left-[50vw] -z-10;
+		@apply absolute  md:rotate-0 -top-32 -left-[50vw];
 	}
 	.info {
-		@apply h-full flex justify-center gap-3 align-middle flex-col z-40 md:ml-[8.3%];
+		@apply h-full flex justify-center gap-3 align-middle  flex-col md:ml-[8.3%];
 		h1 {
-			@apply text-5xl;
+			@apply text-5xl z-40;
+		}
+		h5,
+		h6 {
+			@apply z-40;
 		}
 		.link {
-			@apply z-50;
+			@apply z-[1000];
 		}
 	}
 }

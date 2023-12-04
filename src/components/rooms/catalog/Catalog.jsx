@@ -21,8 +21,8 @@ const Catalog = ({ rooms }) => {
 	) : (
 		<div className={styles.catalog}>
 			{rooms.map((item) => (
-				<Link href={`/rooms/${item.slug}`} key={item.name}>
-					<div className={styles.item}>
+				<div className={styles.item} key={item.name}>
+					<Link href={`/rooms/${item.slug}`}>
 						<Image
 							src={item.img}
 							alt={item.name}
@@ -53,9 +53,9 @@ const Catalog = ({ rooms }) => {
 							</div>
 							<p>Цена за сутки: {item.cost}₽</p>
 						</div>
-						<Button text={`Забронировать`} />
-					</div>
-				</Link>
+					</Link>
+					<Button text={`Забронировать`} type={1} />
+				</div>
 			))}
 		</div>
 	);

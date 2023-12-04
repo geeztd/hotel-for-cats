@@ -25,7 +25,7 @@ const Slide = ({ name, space, size, cost, img, slug }) => {
 							<li>Размеры - {size}</li>
 							<li>Цена за сутки - {cost}₽</li>
 						</ul>
-						<Button text={`Забронировать`} />
+						<Button text={`Забронировать`} type={0} />
 					</div>
 				</div>
 			</Link>

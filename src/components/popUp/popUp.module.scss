@@ -1,0 +1,37 @@
+.boking_form {
+	@apply relative text-black overflow-hidden;
+	.h1 {
+		@apply font-medium text-xl text-center;
+	}
+	.img {
+		@apply absolute  -left-1 w-14;
+	}
+	.form {
+		@apply flex flex-col gap-2 justify-center items-center;
+		input {
+			@apply rounded-xl border pl-1 placeholder:text-black;
+		}
+		.date {
+			@apply grid grid-cols-2 w-10/12 gap-1;
+			input {
+				@apply placeholder:text-slate-400;
+			}
+		}
+	}
+}
+
+.sucsess {
+	@apply text-black py-5 text-center flex flex-col gap-3 relative;
+	.h {
+		@apply text-xl font-medium;
+	}
+	.p {
+		@apply px-10;
+	}
+	.but {
+		@apply flex justify-center;
+	}
+	.img {
+		@apply absolute top-0 right-0;
+	}
+}
