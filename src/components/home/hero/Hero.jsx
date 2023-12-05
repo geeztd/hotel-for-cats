@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -17,14 +20,18 @@ const Hero = () => {
 				alt='hero'
 			/>
 
-			<div className={styles.info}>
+			<motion.div
+				className={styles.info}
+				initial={{ x: -50, y: -50 }}
+				whileInView={{ x: 0, y: 0 }}
+			>
 				<h6>Санкт-Петербург</h6>
 				<h1>Котейка</h1>
 				<h5>Уютная гостиница для котов и кошек</h5>
 				<Link href='/rooms' className={styles.link}>
 					<Button text={`Забронировать`} type={0} />
 				</Link>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

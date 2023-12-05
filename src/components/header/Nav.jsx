@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -18,18 +19,26 @@ const Nav = ({ isFooter }) => {
 			</div>
 			{isMobile || isFooter ? (
 				<nav className={styles.nav}>
-					<Link className={styles.link} href='/'>
-						Главная
-					</Link>
-					<Link className={styles.link} href='/rooms'>
-						Номера
-					</Link>
-					<Link className={styles.link} href='/#aboute'>
-						Почему мы?
-					</Link>
-					<Link className={styles.link} href='/#com'>
-						Отзывы
-					</Link>
+					<motion.div whileHover={{ scale: 1.1 }}>
+						<Link className={styles.link} href='/'>
+							Почему мы?
+						</Link>
+					</motion.div>
+					<motion.div whileHover={{ scale: 1.1 }}>
+						<Link className={styles.link} href='/rooms'>
+							Номера
+						</Link>
+					</motion.div>
+					<motion.div whileHover={{ scale: 1.1 }}>
+						<Link className={styles.link} href='/#aboute'>
+							Почему мы?
+						</Link>
+					</motion.div>
+					<motion.div whileHover={{ scale: 1.1 }}>
+						<Link className={styles.link} href='/#com'>
+							Отзывы
+						</Link>
+					</motion.div>
 				</nav>
 			) : (
 				<Burger />

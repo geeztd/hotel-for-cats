@@ -55,7 +55,7 @@ const Item = ({ params }) => {
 					</div>
 					<p className={styles.cost}>Цена за сутки - {item.cost}₽</p>
 					<div className={styles.button}>
-						<Button text={`Забронировать`} />
+						<Button text={`Забронировать`} type={1} />
 					</div>
 				</div>
 			</div>

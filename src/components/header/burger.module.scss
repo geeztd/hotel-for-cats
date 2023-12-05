@@ -1,4 +1,5 @@
 .burger_nav {
+	@apply overflow-hidden;
 	.burger_off {
 		@apply flex flex-col justify-between h-6 w-8 md:hidden;
 		span {
@@ -6,12 +7,12 @@
 		}
 	}
 	.box {
-		@apply absolute h-[100vh] w-[100vw] top-0 left-0 bg-white;
+		@apply absolute h-[100vh] w-[100vw] top-0 left-0 bg-white z-[1001] overflow-hidden;
 	}
 	.head {
 		@apply flex w-10/12 mx-auto justify-between mt-5;
 		.burger_on {
-			@apply h-6 w-8 relative mt-3 mr-3;
+			@apply h-6 w-8 relative mt-3 mr-3 z-[1002];
 			.span1 {
 				@apply absolute top-1/2 left-1/2 rotate-45 bg-[#FAC663] w-10 h-[1px] block;
 			}
@@ -21,6 +22,9 @@
 		}
 	}
 	.nav {
-		@apply flex flex-col gap-3 text-center mt-6;
+		@apply flex flex-col gap-3 text-center mt-6 z-[1003];
+		a {
+			@apply z-[1004];
+		}
 	}
 }

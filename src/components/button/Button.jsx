@@ -13,7 +13,7 @@ const Button = ({ text, type }) => {
 	const [isOpenBoking, setBokingOpen] = useState(false);
 	const [isSucsessOpen, setSucsessOpen] = useState(false);
 	return (
-		<div
+		<button
 			className={styles.button}
 			onClick={(e) => {
 				if (type === 1) setBokingOpen(true);
@@ -40,7 +40,7 @@ const Button = ({ text, type }) => {
 					<Sucsess setOpen={setSucsessOpen} />
 				</Modal>
 			) : null}
-		</div>
+		</button>
 	);
 };
 
