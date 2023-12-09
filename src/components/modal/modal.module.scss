@@ -1,12 +1,12 @@
 .modal {
 	@apply flex justify-center items-center w-full fixed h-full  z-30 top-0 left-0 bg-opacity-80 bg-white overflow-auto;
 	.modal_box {
-		@apply relative shadow rounded-lg h-fit bg-white opacity-100 z-50 min-w-[310px] my-7;
+		@apply relative shadow rounded-lg cursor-default h-fit bg-white opacity-100 z-50 min-w-[310px] my-7;
 		.modal_main {
 			@apply my-6;
 		}
 		.break {
-			@apply w-11 h-11 absolute top-0 right-0;
+			@apply w-11 h-11 absolute top-0 right-0 cursor-pointer;
 			span {
 				@apply h-[1px] bg-black w-8 block absolute top-1/2;
 			}

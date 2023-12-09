@@ -63,7 +63,7 @@ const Aside = ({ rooms, data, setData, setFiltOpen }) => {
 									id={`sq${item.square}`}
 								/>
 							)}
-							{`${item.square} м²`}
+							{` ${item.square} м²`}
 						</label>
 					))}
 				</div>
@@ -77,7 +77,7 @@ const Aside = ({ rooms, data, setData, setFiltOpen }) => {
 								value={item.value}
 								name={`fas${item.id}`}
 							/>
-							{item.name}
+							{` ${item.name}`}
 						</label>
 					))}
 				</div>
