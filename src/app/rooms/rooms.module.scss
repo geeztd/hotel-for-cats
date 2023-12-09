@@ -14,5 +14,11 @@
 		.filter {
 			@apply shadow rounded-3xl flex gap-2 text-lg p-2;
 		}
+		.sort {
+			@apply border rounded-3xl shadow p-2;
+			option {
+				@apply rounded-lg;
+			}
+		}
 	}
 }

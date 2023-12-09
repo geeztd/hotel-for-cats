@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -31,6 +32,7 @@ const page = () => {
 								onChange={(e) => {
 									setSel(e.target.value);
 								}}
+								className={styles.sort}
 							>
 								<option value={0}>↑ По площади</option>
 								<option value={1}>↓ По площади</option>
@@ -53,16 +55,18 @@ const page = () => {
 			) : (
 				<div className={styles.rooms}>
 					<div className={styles.filter_box}>
-						{isFiltOpen ? (
-							<Modal setFiltOpen={setFiltOpen}>
-								<Aside
-									data={data}
-									rooms={rooms}
-									setData={setData}
-									setFiltOpen={setFiltOpen}
-								/>
-							</Modal>
-						) : null}
+						<AnimatePresence>
+							{isFiltOpen && (
+								<Modal setFiltOpen={setFiltOpen}>
+									<Aside
+										data={data}
+										rooms={rooms}
+										setData={setData}
+										setFiltOpen={setFiltOpen}
+									/>
+								</Modal>
+							)}
+						</AnimatePresence>
 					</div>
 					<section className={styles.head}>
 						<h1>Наши номера</h1>
@@ -86,6 +90,7 @@ const page = () => {
 								onChange={(e) => {
 									setSel(e.target.value);
 								}}
+								className={styles.sort}
 							>
 								<option value={0}>↑ По площади</option>
 								<option value={1}>↓ По площади</option>

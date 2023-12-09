@@ -39,7 +39,7 @@ const Footer = () => {
 			</div>
 			<Nav isFooter={true} />
 			<div className={styles.copy}>
-				<span>© 2019 Все права защищены</span>
+				<span>© 2023 Все права защищены</span>
 				<span>Политика конфиденциальности</span>
 			</div>
 		</footer>

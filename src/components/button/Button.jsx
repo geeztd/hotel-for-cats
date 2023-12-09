@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -14,6 +15,7 @@ const Button = ({ text, type }) => {
 	const [isSucsessOpen, setSucsessOpen] = useState(false);
 	return (
 		<button
+			type='button'
 			className={styles.button}
 			onClick={(e) => {
 				if (type === 1) setBokingOpen(true);
@@ -27,19 +29,25 @@ const Button = ({ text, type }) => {
 				height={36}
 				alt='step'
 			/>
-			{isOpenBoking ? (
-				<Modal setFiltOpen={setBokingOpen}>
-					<BokingForm
-						setOpen={setBokingOpen}
-						setSucOpen={setSucsessOpen}
-					/>
-				</Modal>
-			) : null}
-			{isSucsessOpen ? (
-				<Modal setFiltOpen={setSucsessOpen}>
-					<Sucsess setOpen={setSucsessOpen} />
-				</Modal>
-			) : null}
+
+			<AnimatePresence>
+				{isOpenBoking && (
+					<Modal setFiltOpen={setBokingOpen}>
+						<BokingForm
+							setOpen={setBokingOpen}
+							setSucOpen={setSucsessOpen}
+						/>
+					</Modal>
+				)}
+			</AnimatePresence>
+
+			<AnimatePresence>
+				{isSucsessOpen && (
+					<Modal setFiltOpen={setSucsessOpen}>
+						<Sucsess setOpen={setSucsessOpen} />
+					</Modal>
+				)}
+			</AnimatePresence>
 		</button>
 	);
 };

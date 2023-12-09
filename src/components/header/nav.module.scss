@@ -1,6 +1,5 @@
 .header {
-	@apply flex justify-between w-10/12 mt-5 mx-auto items-center;
-
+	@apply flex justify-between relative w-10/12 mt-5 mx-auto items-center overflow-hidden md:overflow-visible;
 	.nav {
 		@apply md:flex md:gap-5 gap-2 items-center grid grid-cols-2;
 		.link {
