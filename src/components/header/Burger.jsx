@@ -52,7 +52,7 @@ const Burger = () => {
 							href='/'
 							onClick={() => setClick(!isClick)}
 						>
-							Почему мы?
+							Главная
 						</Link>
 					</motion.div>
 					<motion.div whileHover={{ scale: 1.2 }}>

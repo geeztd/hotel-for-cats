@@ -24,8 +24,10 @@ const Carusel = ({ slidesView, isReviews, id }) => {
 		setData(getRand(rooms, selectItem));
 	}, [selectItem]);
 
-	let numberSwiper;
-	isReviews ? (numberSwiper = 1) : (numberSwiper = 2);
+	let numberSwiper, laptopSwap;
+	isReviews
+		? (numberSwiper = laptopSwap = 2)
+		: (numberSwiper = laptopSwap = 1);
 
 	return (
 		<div className={styles.wrapper} id={id}>
@@ -40,7 +42,8 @@ const Carusel = ({ slidesView, isReviews, id }) => {
 				pagination={{ clickable: true }}
 				breakpoints={{
 					320: { slidesPerView: 1 },
-					768: { slidesPerView: slidesView },
+					768: { slidesPerView: laptopSwap },
+					1024: { slidesPerView: slidesView },
 				}}
 			>
 				{isReviews

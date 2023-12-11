@@ -21,7 +21,7 @@ const Nav = ({ isFooter }) => {
 				<nav className={styles.nav}>
 					<motion.div whileHover={{ scale: 1.1 }}>
 						<Link className={styles.link} href='/'>
-							Почему мы?
+							Главная
 						</Link>
 					</motion.div>
 					<motion.div whileHover={{ scale: 1.1 }}>

@@ -21,6 +21,20 @@ const page = () => {
 	const [sel, setSel] = useState(0);
 	const [isFiltOpen, setFiltOpen] = useState(false);
 
+	const Sort = (a, b) => {
+		switch (+sel) {
+			case 0:
+				return b.square - a.square;
+			case 1:
+				return a.square - b.square;
+			case 2:
+				return b.cost - a.cost;
+			case 3:
+				return a.cost - b.cost;
+			default:
+				return 0;
+		}
+	};
 	return (
 		<>
 			{isMedium ? (
@@ -31,6 +45,7 @@ const page = () => {
 							<select
 								onChange={(e) => {
 									setSel(e.target.value);
+									setData([...data.sort(Sort)]);
 								}}
 								className={styles.sort}
 							>
@@ -48,7 +63,7 @@ const page = () => {
 							setFiltOpen={setFiltOpen}
 							data={data}
 						/>
-						<Catalog rooms={sel % 2 === 0 ? data : data.reverse()} />
+						<Catalog rooms={data} />
 					</section>
 					<Banner />
 				</div>
@@ -89,6 +104,7 @@ const page = () => {
 							<select
 								onChange={(e) => {
 									setSel(e.target.value);
+									setData([...data.sort(Sort)]);
 								}}
 								className={styles.sort}
 							>
@@ -99,7 +115,7 @@ const page = () => {
 							</select>
 						</form>
 					</section>
-					<Catalog rooms={sel % 2 === 0 ? data : data.reverse()} />
+					<Catalog rooms={data} />
 					<Banner />
 				</div>
 			)}
